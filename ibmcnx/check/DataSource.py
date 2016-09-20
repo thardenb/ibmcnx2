@@ -1,12 +1,15 @@
 '''
-  Description:   Show the status of all data sources
+  Description:   Show the status of all data sources. Updated for 5.5 to correct and add data source names
 
   Author:        Christoph Stoettner
   Mail:          christoph.stoettner@stoeps.de
   Documentation: http://scripting101.stoeps.de
+  
+  Updated by:    Ted Hardenburgh
+  Mail:          thardenb@gmail.com
 
-  Version:       5.0.1
-  Date:          09/19/2015
+  Version:       5.5
+  Date:          09/20/2016
 
   License:       Apache 2.0
 
@@ -16,8 +19,8 @@ runDB = []
 errorDB = []
 notInstDB = []
 
-dbs = ['FNOSDS', 'FNGCDDS', 'IBM_FORMS_DATA_SOURCE', 'activities', 'blogs', 'communities', 'dogear', 'files', 'forum',
-       'homepage', 'metrics', 'mobile', 'news', 'oauth provider', 'profiles', 'search', 'wikis']    # List of all databases to check
+dbs = ['FNOSDS', 'FNGCDDS', 'IBM_FORMS_DATA_SOURCE', 'activities', 'blogs', 'communities', 'dogear', 'files', 'forums',
+       'homepage', 'metrics', 'mobile', 'news', 'oauth provider', 'profiles', 'pushnotification', 'search', 'urlpreview', 'widgetcontainer', 'wikis']    # List of all databases to check
 
 for db in dbs:    # loop through databases
     ds = AdminConfig.getid('/DataSource:' + db + '/')
